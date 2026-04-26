@@ -3,446 +3,548 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1d1916">
-  <meta name="generator" content="Codex">
-  <meta name="description" content="XHS Studio 是面向 macOS 与 Windows 的多账号自媒体工作台，覆盖 xhs 稿件提取、图文模板、媒体下载、同步发布、CLI 自动化与可扩展站点能力。">
+  <meta name="theme-color" content="#1A1612">
+  <meta name="description" content="CreatorFlow Studio — 面向多账号创作者的 AI 桌面助手。让 AI 帮你规划选题、改写文案、匹配风格、统一管理素材与账号登录态，一个人也能做一支团队的事。">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="XHS Studio">
+  <meta property="og:title" content="CreatorFlow Studio · AI 创作桌面助手">
   <meta property="og:url" content="https://zzq-000.github.io/">
-  <meta property="og:site_name" content="XHS Studio">
-  <meta property="og:description" content="把稿件提取、媒体下载、账号隔离、同步发布与任务观测收进一个桌面工作台。">
+  <meta property="og:description" content="让 AI 帮你规划选题、改写文案、匹配风格、统一管理多账号素材与登录态。XHS / DY / KS / BL / WB 全覆盖。">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:image" content="/images/logo.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="XHS Studio">
-  <meta name="twitter:description" content="面向内容团队与独立开发者的多账号自媒体工作台。">
+  <meta property="og:image" content="/images/app-logo.png">
 
   <link rel="canonical" href="https://zzq-000.github.io/">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/app-logo.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/app-logo.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#1d1916">
+  <link rel="shortcut icon" href="/images/app-logo.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,800&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/landing.css">
-  <title>XHS Studio | 多账号自媒体工作台</title>
+
+  <title>CreatorFlow Studio · AI 创作桌面助手</title>
 </head>
 <body>
-  <div class="landing-shell">
-    <header class="site-header">
-      <div class="section site-header__inner">
-        <div class="brand" aria-label="XHS Studio 品牌">
-          <span class="brand__mark">XS</span>
-          <span class="brand__text">
-            <span class="brand__title">XHS Studio</span>
-            <span class="brand__subtitle">Multi-account content operations workspace</span>
-          </span>
-        </div>
-        <nav class="site-nav" aria-label="主导航">
-          <span>能力矩阵</span>
-          <span>工作流</span>
-          <span>桌面 + CLI</span>
-          <span>可扩展性</span>
-          <span class="site-nav__cta">发布系统</span>
-        </nav>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <div class="shell masthead__inner">
+      <div class="masthead__brand">
+        <img src="/images/app-logo.png" alt="CreatorFlow Studio" class="masthead__logo" width="44" height="44" loading="eager" decoding="async">
+        <span class="masthead__title">
+          <span class="masthead__name">CreatorFlow&nbsp;Studio</span>
+          <span class="masthead__kicker">AI-native creator desk</span>
+        </span>
       </div>
-    </header>
+      <nav class="masthead__nav" aria-label="目录">
+        <a href="#why"><span>§01</span>为什么</a>
+        <a href="#ai"><span>§02</span>AI 能力</a>
+        <a href="#scenarios"><span>§03</span>使用场景</a>
+        <a href="#platforms"><span>§04</span>覆盖平台</a>
+        <a href="#contact"><span>§05</span>联系</a>
+      </nav>
+      <div class="masthead__issue">Issue · 2026</div>
+    </div>
+    <hr class="shell rule">
+  </header>
 
-    <main>
-      <section class="section hero">
-        <div class="hero__content">
-          <div class="eyebrow reveal">Desktop workspace for creator operations</div>
-          <h1 class="hero__title reveal reveal--delay-1">
-            让多账号发布
-            <strong>不再像手工搬运</strong>
-          </h1>
-          <p class="hero__summary reveal reveal--delay-2">
-            XHS Studio 把稿件提取、内置多种风格的图文模板、媒体下载、账号隔离、同步发布与任务观测整合进一个桌面工作台，
-            以 xhs 为核心能力，并为 douyin、kuaishou、bilibili、weibo 预留扩展底座。
-          </p>
-          <div class="hero__actions reveal reveal--delay-3">
-            <span class="button button--primary">核心能力矩阵</span>
-            <span class="button button--secondary">桌面与 CLI 协同</span>
-          </div>
-          <div class="hero__meta reveal reveal--delay-3">
-            <span>macOS / Windows</span>
-            <span>Main Workspace + Sub Workspaces</span>
-            <span>Desktop UI + CLI</span>
-            <span>Retry-safe publish jobs</span>
-          </div>
+  <main>
+
+    <!-- ============== HERO ============== -->
+    <section class="shell hero">
+      <div class="hero__body">
+        <p class="kicker">AI-native creator desk</p>
+
+        <h1 class="headline">
+          <span class="headline__line">让 AI 陪你</span>
+          <span class="headline__line headline__line--italic"><em>做内容</em>。</span>
+        </h1>
+
+        <p class="lede">
+          一个人运营多个账号，最费时间的不是写——是
+          <em>找选题、改风格、切账号、整理素材</em>。
+          CreatorFlow Studio 把这些琐碎交给 AI 与桌面工作台，
+          你专注创作，它负责打理流程。
+        </p>
+
+        <div class="hero__cta">
+          <a class="button button--primary" href="#contact">
+            <span>预约演示</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="square"/></svg>
+          </a>
+          <a class="button button--ghost" href="#ai">看 AI 怎么帮你</a>
         </div>
 
-        <div class="hero-panel reveal reveal--delay-2" aria-label="XHS Studio 控制台预览">
-          <div class="window-shell">
-            <div class="window-topbar">
-              <div class="window-dots" aria-hidden="true">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div class="window-label">XHS Studio Workspace</div>
-            </div>
-
-            <div class="dashboard">
-              <aside class="dashboard-sidebar">
-                <p class="dashboard-section-title">
-                  <span>Accounts</span>
-                  <span class="mini-badge">isolated</span>
-                </p>
-                <div class="account-list">
-                  <div class="account-card account-card--active">
-                    <strong>主工作区</strong>
-                    <small>persist:main-workspace</small>
-                  </div>
-                  <div class="account-card">
-                    <strong>xhs / account-01</strong>
-                    <small>独立登录态与会话隔离</small>
-                  </div>
-                  <div class="account-card">
-                    <strong>xhs / account-02</strong>
-                    <small>支持子工作区独立打开</small>
-                  </div>
-                </div>
-                <div class="sidebar-status">
-                  <strong>Workspace Ready</strong>
-                  <span>主工作区与子工作区保持独立，避免账号串扰。</span>
-                </div>
-              </aside>
-
-              <div class="dashboard-main">
-                <div class="studio-ribbon">
-                  <span class="studio-chip">Draft intake</span>
-                  <span class="studio-chip">Rich templates</span>
-                  <span class="studio-chip">Media download</span>
-                  <span class="studio-chip">Sync publish</span>
-                  <span class="studio-chip">Retry-safe jobs</span>
-                </div>
-
-                <div class="studio-canvas">
-                  <section class="canvas-card canvas-card--primary">
-                    <div class="pipeline-card__row">
-                      <strong>同步发布控制台</strong>
-                      <span class="pipeline-card__tag">xhs full support</span>
-                    </div>
-                    <small>从稿件整理到目标账号投递，所有动作被放进同一个任务视图中。</small>
-                    <div class="publish-meter">
-                      <div class="meter-row">
-                        <span>内容抽取</span>
-                        <div class="meter-track"><i style="width: 88%"></i></div>
-                      </div>
-                      <div class="meter-row">
-                        <span>媒体准备</span>
-                        <div class="meter-track"><i style="width: 74%"></i></div>
-                      </div>
-                      <div class="meter-row">
-                        <span>发布队列</span>
-                        <div class="meter-track"><i style="width: 92%"></i></div>
-                      </div>
-                    </div>
-                    <div class="log-box">
-                      <div><span>[job]</span> publish preflight --draft draft_hero --accounts a01,a02</div>
-                      <div><span>[ok]</span> media prepared, targets ready, queue created</div>
-                      <div><span>[run]</span> sub-workspaces receiving synced content ...</div>
-                    </div>
-                  </section>
-
-                  <aside class="canvas-side">
-                    <div class="mini-panel">
-                      <strong>图文模板</strong>
-                      <span>multi-style presets</span>
-                      <small>内置多种风格的图文模板，适合不同账号定位与内容包装。</small>
-                    </div>
-                    <div class="mini-panel">
-                      <strong>媒体落地</strong>
-                      <span>download + local archive</span>
-                      <small>下载到本地目录，保留后续复用与重试输入。</small>
-                    </div>
-                    <div class="mini-panel">
-                      <strong>发布协议</strong>
-                      <span>status / wait / retry / cancel</span>
-                      <small>让 GUI 与 CLI 共用一套任务状态机。</small>
-                    </div>
-                    <div class="mini-panel">
-                      <strong>可扩展</strong>
-                      <span>site registries</span>
-                      <small>为 douyin、kuaishou、bilibili、weibo 预留接入底座。</small>
-                    </div>
-                  </aside>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="terminal-card">
-            <p class="terminal-title">
-              <span>CLI</span>
-              <span class="mini-badge">agent-friendly</span>
-            </p>
-            <pre><code><span class="comment">$ inspect runtime</span>
-xhs app health --pretty=true
-
-<span class="comment">$ preflight before publish</span>
-xhs publish preflight --draft draft_hero --accounts acc01,acc02
-
-<span class="comment">$ wait for job completion</span>
-xhs publish wait --job job_xhs_2048 --timeout 600
-
-<span class="ok">ready:</span> desktop + automation share one publish protocol</code></pre>
-          </div>
-
-          <div class="signal-card">
-            <p class="card-title">
-              <span>Operational Signals</span>
-              <span class="mini-badge">local-first</span>
-            </p>
-            <p>把易碎的发布步骤改造成可监控、可重试、可解释的任务系统。</p>
-            <div class="signal-grid">
-              <div>
-                <strong>Account</strong>
-                <span>session isolation</span>
-              </div>
-              <div>
-                <strong>Draft</strong>
-                <span>clipboard + media</span>
-              </div>
-              <div>
-                <strong>Publish</strong>
-                <span>queue + logs</span>
-              </div>
-              <div>
-                <strong>Sites</strong>
-                <span>xhs now, more later</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section proof">
-        <div class="proof-grid">
-          <article class="proof-card reveal">
-            <strong>多账号真正隔离</strong>
-            <p>主工作区与子工作区分离，避免登录态串号，也让代运营场景更稳。</p>
-          </article>
-          <article class="proof-card reveal reveal--delay-1">
-            <strong>稿件与媒体成体系</strong>
-            <p>从提取正文到下载媒体，内容资产不再只存在浏览器临时状态里。</p>
-          </article>
-          <article class="proof-card reveal reveal--delay-2">
-            <strong>模板风格可复用</strong>
-            <p>内置多种风格的图文模板，让同一套内容资产可以快速适配不同包装方式。</p>
-          </article>
-          <article class="proof-card reveal reveal--delay-3">
-            <strong>从桌面延伸到自动化</strong>
-            <p>同一套业务能力既能给 GUI 使用，也能给 CLI 与 agent 工作流复用。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section content-section" id="capabilities">
-        <div class="section-head">
-          <div class="section-head__eyebrow">Capabilities</div>
-          <h2>不是简单的发布器，而是一套内容运营工作台</h2>
-          <p>首页要传达的不是“我也能发帖”，而是这套工具怎样把繁琐流程收敛成更可靠的生产系统。</p>
-        </div>
-        <div class="capability-grid">
-          <article class="capability-card">
-            <div class="capability-card__index">01</div>
-            <h3>多账号工作区</h3>
-            <p>支持主工作区与子工作区协作，每个账号拥有独立 session partition，适合多账号并行操作。</p>
-          </article>
-          <article class="capability-card">
-            <div class="capability-card__index">02</div>
-            <h3>稿件提取、模板与媒体下载</h3>
-            <p>提取正文后自动复制到剪贴板，配合内置多种风格的图文模板与媒体下载能力，减少反复切窗口和手动保存。</p>
-          </article>
-          <article class="capability-card">
-            <div class="capability-card__index">03</div>
-            <h3>同步发布编排</h3>
-            <p>面向多个已打开子工作区执行同步发布，配套进度日志、固定节奏和失败重试，降低批量操作风险。</p>
-          </article>
-          <article class="capability-card">
-            <div class="capability-card__index">04</div>
-            <h3>桌面与 CLI 双入口</h3>
-            <p>图形界面适合日常操作，CLI 适合自动化与 agent；两者共享同一套任务协议与运行时能力。</p>
-          </article>
-          <article class="capability-card">
-            <div class="capability-card__index">05</div>
-            <h3>站点扩展底座</h3>
-            <p>当前 xhs 能力较完善，douyin、kuaishou、bilibili、weibo 已具备 registry 与开关结构，便于继续接入。</p>
-          </article>
-          <article class="capability-card">
-            <div class="capability-card__index">06</div>
-            <h3>桌面交付能力</h3>
-            <p>面向 macOS 与 Windows 打包分发，安装器与可执行文件可直接承载业务，无需依赖额外脚本目录。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section content-section" id="workflow">
-        <div class="section-head">
-          <div class="section-head__eyebrow">Workflow</div>
-          <h2>从内容抓取到最终发布，一条链路完成闭环</h2>
-          <p>这个页面重点突出“流程收敛”而不是“功能堆砌”，因为真正让工具显得高级的，是清晰而可靠的系统感。</p>
-        </div>
-        <div class="flow-grid">
-          <article class="flow-card">
-            <div class="flow-card__step">Step 1</div>
-            <h3>采集与整理</h3>
-            <p>从目标内容中提取正文与媒体，快速转成可处理的稿件资产。</p>
-          </article>
-          <article class="flow-card">
-            <div class="flow-card__step">Step 2</div>
-            <h3>本地落盘</h3>
-            <p>把媒体保存到本地目录，并为后续修改、归档和重试保留稳定输入。</p>
-          </article>
-          <article class="flow-card">
-            <div class="flow-card__step">Step 3</div>
-            <h3>同步发布</h3>
-            <p>按目标账号执行发布编排，保持多个子工作区之间的动作一致性。</p>
-          </article>
-          <article class="flow-card">
-            <div class="flow-card__step">Step 4</div>
-            <h3>观测与重试</h3>
-            <p>通过状态查询、等待、取消和重试，把不可控的人工流程变成可处理任务。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section content-section" id="interfaces">
-        <div class="section-head">
-          <div class="section-head__eyebrow">Interfaces</div>
-          <h2>桌面负责体验，CLI 负责规模化</h2>
-          <p>对个人操作者来说，图形界面足够直接；对脚本、自动化或 agent 来说，CLI 让能力可以被程序化调用。</p>
-        </div>
-
-        <div class="duo-panel">
-          <article class="surface-card">
-            <h3>桌面工作台</h3>
-            <p>适合处理账号管理、子工作区打开、内容检查、人工确认与即时观察。</p>
-            <div class="feature-stack">
-              <div class="feature-row">
-                <strong>账号层</strong>
-                <span>在侧边栏添加、编辑、删除账号，并按账号拉起独立子工作区。</span>
-              </div>
-              <div class="feature-row">
-                <strong>稿件层</strong>
-                <span>提取正文、调用内置多种风格的图文模板、下载媒体、复制内容到剪贴板，减少重复切换页面。</span>
-              </div>
-              <div class="feature-row">
-                <strong>发布层</strong>
-                <span>执行单篇或批量同步发布，并在同一界面里看到任务进度与状态变化。</span>
-              </div>
-            </div>
-            <div class="quote-card">
-              <p>好的桌面工具不只是把按钮摆上去，而是让复杂流程在视觉上也能被用户一眼读懂。</p>
-              <strong>XHS Studio 的首页应该传递这种控制感。</strong>
-            </div>
-          </article>
-
-          <article class="surface-card">
-            <h3>CLI / Agent 工作流</h3>
-            <p>适合把固定动作接入脚本、自动化调度、预检查与批量操作。</p>
-            <div class="feature-stack">
-              <div class="feature-row">
-                <strong>预检查</strong>
-                <span>用 `publish preflight` 提前确认媒体、目标账号和执行前置条件是否齐备。</span>
-              </div>
-              <div class="feature-row">
-                <strong>执行</strong>
-                <span>用 `publish run` 发起任务，用 `publish wait` 等待结果，必要时 `retry` 或 `cancel`。</span>
-              </div>
-              <div class="feature-row">
-                <strong>运行时</strong>
-                <span>GUI 与 CLI 共用同一套业务运行时，避免出现两套逻辑分叉和能力不一致。</span>
-              </div>
-            </div>
-            <div class="terminal-card">
-              <p class="terminal-title">
-                <span>Publish Protocol</span>
-                <span class="mini-badge">shared runtime</span>
-              </p>
-              <pre><code>xhs publish preflight --draft draft_042
-xhs publish run --file ./tmp/publish.json
-xhs publish status --job job_042
-xhs publish retry --job job_042</code></pre>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section content-section">
-        <div class="section-head">
-          <div class="section-head__eyebrow">Audience</div>
-          <h2>适合那些不想再靠记忆和体力支撑流程的人</h2>
-          <p>如果你的发布动作已经超出“偶尔手动发一篇”，这类工具带来的价值会变得非常直接。</p>
-        </div>
-        <div class="audience-grid">
-          <article class="audience-card">
-            <h3>内容团队</h3>
-            <p>把多个账号、稿件和发布节奏放进统一工作台，降低协作时的信息丢失与动作分叉。</p>
-          </article>
-          <article class="audience-card">
-            <h3>代运营</h3>
-            <p>独立登录态与子工作区结构更适合一人管理多个客户账号，风险边界更清晰。</p>
-          </article>
-          <article class="audience-card">
-            <h3>独立开发者</h3>
-            <p>CLI、registry 与打包链路让它不只是内部工具，也更接近一个可交付产品。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section cta-block">
-        <div class="cta-surface">
-          <div class="cta-layout">
-            <div class="cta-main">
-              <h2>把你的发布流程，升级成真正能复用的系统</h2>
-              <p>
-                如果你要宣传的不是“一个脚本”，而是一套可以长期维护、持续扩展、还能接住自动化的产品，
-                这个首页现在已经朝这个方向重构完成。
-              </p>
-              <div class="cta-actions">
-                <span class="button button--light">桌面工作台</span>
-                <span class="button button--ghost">稳定发布流程</span>
-              </div>
-            </div>
-
-            <aside class="cta-side">
-              <div class="contact-card">
-                <span class="contact-card__eyebrow">Contact Author</span>
-                <h3>联系作者</h3>
-                <p>如果你要咨询定制、合作、演示或后续扩展，可以直接通过下面这个邮箱联系。</p>
-                <div class="contact-email">z2663219537@gmail.com</div>
-              </div>
-
-              <div class="cta-note-grid">
-                <div class="cta-note">
-                  <strong>Desktop-first</strong>
-                  <span>适合把复杂发布流程收进稳定工作台。</span>
-                </div>
-                <div class="cta-note">
-                  <strong>CLI-ready</strong>
-                  <span>保留自动化调用与 agent 接入空间。</span>
-                </div>
-                <div class="cta-note">
-                  <strong>Extensible</strong>
-                  <span>当前以 xhs 为核心，其他站点可继续扩展。</span>
-                </div>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="section site-footer">
-      <div class="site-footer__inner">
-        <div>XHS Studio · Desktop workspace for creator operations</div>
-        <div>联系作者 · z2663219537@gmail.com</div>
+        <dl class="hero__facts">
+          <div><dt>Platform</dt><dd>macOS · Windows</dd></div>
+          <div><dt>For</dt><dd>内容工作室 · 代运营 · 个人创作者</dd></div>
+          <div><dt>AI Providers</dt><dd>OpenAI · Kimi · DeepSeek · Qwen</dd></div>
+          <div><dt>Status</dt><dd><span class="dot"></span>持续更新中</dd></div>
+        </dl>
       </div>
-    </footer>
-  </div>
+
+      <figure class="hero__plate" aria-label="AI 控制中心预览">
+        <div class="studio">
+          <header class="studio__top">
+            <img src="/images/app-logo.png" alt="" class="studio__logo" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+            <span class="studio__brand">CreatorFlow Studio</span>
+            <span class="studio__spacer"></span>
+            <span class="studio__win"><i></i><i></i><i></i></span>
+          </header>
+
+          <div class="studio__body">
+            <!-- Left column: AI Center -->
+            <div class="studio-panel studio-panel--ai">
+              <div class="studio-panel__head">
+                <span class="studio-panel__title">控制中心</span>
+                <span class="studio-panel__sub">AI · CENTER</span>
+              </div>
+
+              <div class="tabs">
+                <span class="tab">对话调试</span>
+                <span class="tab">图片生成</span>
+                <span class="tab tab--active">引流策划</span>
+              </div>
+
+              <div class="prompts">
+                <span class="prompt">账号定位</span>
+                <span class="prompt">本周选题</span>
+                <span class="prompt">改写语气</span>
+                <span class="prompt">封面建议</span>
+              </div>
+
+              <div class="chat">
+                <div class="chat__msg chat__msg--ai">
+                  <div class="chat__avatar chat__avatar--ai">AI</div>
+                  <div class="chat__bubble">
+                    <span class="chat__meta">AI Co-pilot · 10:24</span>
+                    已读取账号「邻家姐姐 · 亲子生活」的历史内容与语气偏好。本周可以试这 3 个方向：
+                    <div class="ideas">
+                      <div class="idea">
+                        <span class="idea__num">01</span>
+                        <span class="idea__text">3-6 岁睡前故事书单</span>
+                        <span class="idea__tag">高转化</span>
+                      </div>
+                      <div class="idea">
+                        <span class="idea__num">02</span>
+                        <span class="idea__text">平价绘本·妈妈亲测</span>
+                        <span class="idea__tag">引评论</span>
+                      </div>
+                      <div class="idea">
+                        <span class="idea__num">03</span>
+                        <span class="idea__text">让孩子爱上绘本</span>
+                        <span class="idea__tag">痛点共鸣</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chat__msg chat__msg--user">
+                  <div class="chat__bubble chat__bubble--user">
+                    <span class="chat__meta">你 · 10:25</span>
+                    就第 1 个，按我的语气起个开头
+                  </div>
+                  <div class="chat__avatar chat__avatar--user">你</div>
+                </div>
+
+                <div class="chat__msg chat__msg--ai">
+                  <div class="chat__avatar chat__avatar--ai">AI</div>
+                  <div class="chat__bubble chat__bubble--typing">
+                    <span class="typing-dots"><i></i><i></i><i></i></span>
+                    正在按账号语气生成初稿…
+                  </div>
+                </div>
+              </div>
+
+              <div class="studio__composer">
+                <span class="studio__composer-hint">继续和 AI 聊聊本期内容…</span>
+                <span class="studio__composer-send">
+                  <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </span>
+              </div>
+            </div>
+
+            <!-- Right column: account cards -->
+            <div class="studio-panel studio-panel--sidebar">
+              <div class="studio-panel__head studio-panel__head--tight">
+                <span class="studio-panel__title">账号</span>
+                <span class="studio-panel__sub">SITES</span>
+              </div>
+              <div class="account account--active">
+                <span class="account__dot"></span>
+                <div>
+                  <strong>邻家姐姐</strong>
+                  <em>亲子 · XHS</em>
+                </div>
+              </div>
+              <div class="account">
+                <span class="account__dot account__dot--blue"></span>
+                <div>
+                  <strong>穿搭日记</strong>
+                  <em>时尚 · DY</em>
+                </div>
+              </div>
+              <div class="account">
+                <span class="account__dot account__dot--green"></span>
+                <div>
+                  <strong>好物 · 清单</strong>
+                  <em>生活 · BL</em>
+                </div>
+              </div>
+
+              <div class="studio-panel__head studio-panel__head--tight" style="margin-top:auto">
+                <span class="studio-panel__title">今日</span>
+                <span class="studio-panel__sub">DONE BY AI</span>
+              </div>
+              <ul class="done">
+                <li><em>12</em>素材入库</li>
+                <li><em>3</em>篇初稿产出</li>
+                <li><em>3</em>个封面生成</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <figcaption>Fig. 01 — CreatorFlow Studio · 控制中心界面示意</figcaption>
+      </figure>
+    </section>
+
+    <hr class="shell rule">
+
+    <!-- ============== WHY / PAIN POINTS ============== -->
+    <section class="shell why" id="why">
+      <header class="section-head">
+        <span class="section-head__mark">§ 01</span>
+        <h2>它解决什么问题 <em>The pain</em></h2>
+        <p>你要的是好内容，不是再学一套工具。下面这些常见的"麻烦"，CreatorFlow Studio 替你扛。</p>
+      </header>
+
+      <ol class="pains">
+        <li>
+          <div class="pains__pain">
+            <span class="pains__label">痛点</span>
+            <h3>多个账号<em>来回切</em>，登录状态频繁掉</h3>
+            <p>浏览器里换来换去，cookie 串号、频繁要求重登，一天花 30% 时间在找账号、改密码、扫码上。</p>
+          </div>
+          <div class="pains__fix">
+            <span class="pains__label pains__label--ok">我们的方案</span>
+            <p>每个账号独立工作区，登录态互不干扰，一次登录长期保留。切换账号像切换标签页，但状态永远是对的。</p>
+          </div>
+        </li>
+        <li>
+          <div class="pains__pain">
+            <span class="pains__label">痛点</span>
+            <h3>想不出新选题，<em>写到第三天就没感觉</em></h3>
+            <p>账号定位你心里有数，但每天"写什么"还是难。参考别人又怕同质化，对着空白文档发呆。</p>
+          </div>
+          <div class="pains__fix">
+            <span class="pains__label pains__label--ok">我们的方案</span>
+            <p>AI 选题助手基于你账号的定位与历史内容给出当周可用选题，还能直接生成 3 种开头风格供你挑。</p>
+          </div>
+        </li>
+        <li>
+          <div class="pains__pain">
+            <span class="pains__label">痛点</span>
+            <h3>一篇内容<em>套不同账号</em>时，语气全变一个样</h3>
+            <p>手动改语气太费心，同一条内容发 3 个账号像复读机；但不同账号的粉丝对同质化最敏感。</p>
+          </div>
+          <div class="pains__fix">
+            <span class="pains__label pains__label--ok">我们的方案</span>
+            <p>指定每个账号的语气与风格，AI 一次把同一素材改写出不同版本，既保留核心卖点，又让每个账号听起来像自己。</p>
+          </div>
+        </li>
+        <li>
+          <div class="pains__pain">
+            <span class="pains__label">痛点</span>
+            <h3>素材<em>散落四处</em>，下次要用又找不到</h3>
+            <p>文案在笔记、图片在微信、灵感在浏览器收藏夹。等到要做内容时，每次都要从零翻一遍。</p>
+          </div>
+          <div class="pains__fix">
+            <span class="pains__label pains__label--ok">我们的方案</span>
+            <p>所有内容、素材、封面、草稿都在本地工作台里按账号归档。AI 可以翻你的旧稿子，帮你"组合"出新内容。</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <hr class="shell rule">
+
+    <!-- ============== AI CO-PILOT ============== -->
+    <section class="shell ai" id="ai">
+      <header class="section-head">
+        <span class="section-head__mark">§ 02</span>
+        <h2>AI 是这张桌子的<em>主角</em></h2>
+        <p>不是"多加一个 AI 按钮"，而是从选题到成稿，AI 一直和你一起在桌面上工作。</p>
+      </header>
+
+      <div class="ai-grid">
+        <article class="ai-card ai-card--hero">
+          <div class="ai-card__inner">
+            <span class="ai-card__eyebrow">AI Co-pilot</span>
+            <h3>让 AI 真的"懂你这个账号"</h3>
+            <p>
+              CreatorFlow Studio 的 AI 不是一次性对话，它能读取你设定的账号定位、目标人群、语气偏好、禁用词与过往稿件，
+              每次提问都带着这些上下文，给你的回答天然贴近这个账号。
+            </p>
+            <ul class="ai-card__bullets">
+              <li>设定一次，账号画像跟着走</li>
+              <li>支持 OpenAI · Kimi · DeepSeek · Qwen 多家模型，按需切换</li>
+              <li>所有对话记录和生成产物保存在本地，完全属于你</li>
+            </ul>
+          </div>
+          <div class="ai-card__visual" aria-hidden="true">
+            <div class="ai-chat">
+              <div class="ai-chat__line ai-chat__line--user">这个账号的风格像一个爱分享的邻家姐姐</div>
+              <div class="ai-chat__line ai-chat__line--ai">已记住。以后生成的内容会带这种亲切、口语化的语气。</div>
+              <div class="ai-chat__line ai-chat__line--user">本周想做"秋冬出街穿搭"</div>
+              <div class="ai-chat__line ai-chat__line--ai">
+                给你 5 个方向：<br>1. 一件大衣穿一周<br>2. 小个子避雷单品<br>3. 配色公式<br>4. 早八通勤 · 省时穿搭<br>5. 周末 look 灵感簿
+              </div>
+              <div class="ai-chat__line ai-chat__line--typing"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ai-card">
+          <span class="ai-card__tag">01</span>
+          <h4>选题策划</h4>
+          <p>一句话说清定位，AI 一次性给出当周可用选题与三种开头风格，避免再对着空白文档发呆。</p>
+        </article>
+
+        <article class="ai-card">
+          <span class="ai-card__tag">02</span>
+          <h4>文案改写 · 多账号</h4>
+          <p>同一素材为不同账号改写出不同语气的版本，保留核心卖点但听起来像各自的人设。</p>
+        </article>
+
+        <article class="ai-card">
+          <span class="ai-card__tag">03</span>
+          <h4>封面 / 配图生成</h4>
+          <p>按品牌色与风格生成封面与插图；也可以让 AI 从你上传的素材里挑最合适的一张。</p>
+        </article>
+
+        <article class="ai-card">
+          <span class="ai-card__tag">04</span>
+          <h4>素材整理助手</h4>
+          <p>本地草稿库会被 AI 索引，当你想做新内容时，它可以翻旧稿"重新组合"，让素材发挥第二次价值。</p>
+        </article>
+
+        <article class="ai-card">
+          <span class="ai-card__tag">05</span>
+          <h4>自带提示词库</h4>
+          <p>内置常用创作提示词与模板，不需要自己研究怎么写 prompt，也不会把 AI 用成简单的"ChatGPT 网页"。</p>
+        </article>
+
+        <article class="ai-card">
+          <span class="ai-card__tag">06</span>
+          <h4>本地优先，数据可控</h4>
+          <p>草稿、素材、账号配置都保存在本地；调用哪家 AI、用什么 Key 由你决定，不绕平台。</p>
+        </article>
+      </div>
+    </section>
+
+    <hr class="shell rule">
+
+    <!-- ============== SCENARIOS ============== -->
+    <section class="shell scenarios" id="scenarios">
+      <header class="section-head">
+        <span class="section-head__mark">§ 03</span>
+        <h2>三个典型场景 <em>Who uses it</em></h2>
+        <p>不关心技术细节也没关系——看看你自己是不是其中一个。</p>
+      </header>
+
+      <div class="scene">
+        <div class="scene__tag">场景 A</div>
+        <div class="scene__persona">
+          <span class="scene__role">/ 个人创作者</span>
+          <p class="scene__line">我一个人运营 3 个不同方向的账号，每天内容产出根本来不及</p>
+        </div>
+        <div class="scene__solution">
+          <h3>让 AI 做你的"第二个自己"</h3>
+          <p>设定好每个账号的定位和语气，AI 每天帮你准备选题、写初稿、改风格；
+          你只需要最后做决策和发出，从"被时间推着走"变成"挑你真正想发的"。</p>
+          <ul class="scene__list">
+            <li><strong>早晨</strong><span>AI 整理昨晚灵感，给你一份可用选题清单</span></li>
+            <li><strong>白天</strong><span>你挑一个，AI 按账号语气生成 3 版文案初稿</span></li>
+            <li><strong>晚上</strong><span>你做最终打磨，其他账号的版本由 AI 同步改写好</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scene scene--alt">
+        <div class="scene__tag">场景 B</div>
+        <div class="scene__persona">
+          <span class="scene__role">/ 内容工作室</span>
+          <p class="scene__line">五六个人服务十几个客户账号，沟通和素材交接是最大的成本</p>
+        </div>
+        <div class="scene__solution">
+          <h3>把散乱的流程收进一张工作台</h3>
+          <p>每个客户账号一个独立工作区，素材、草稿、历史内容按账号分组；
+          团队成员统一在同一个桌面上协作，AI 帮主编把零散笔记整理成成稿。</p>
+          <ul class="scene__list">
+            <li><strong>账号层</strong><span>客户登录态独立，不会串号，交接更清晰</span></li>
+            <li><strong>素材层</strong><span>本地归档，按主题 / 账号 / 时间检索</span></li>
+            <li><strong>AI 层</strong><span>主编把"我要这种风格"说给 AI，初稿批量产出</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene__tag">场景 C</div>
+        <div class="scene__persona">
+          <span class="scene__role">/ 个人 IP · 知识博主</span>
+          <p class="scene__line">我有长文内容，怎么拆解成不同平台需要的形式？</p>
+        </div>
+        <div class="scene__solution">
+          <h3>一稿多形态，AI 帮你拆</h3>
+          <p>把长文给 AI，它按不同平台的节奏拆成短图文、卡片、金句、封面文案；
+          你自己要做的只是审阅和发布，让一份深度内容辐射到更多渠道。</p>
+          <ul class="scene__list">
+            <li><strong>拆解</strong><span>长文 → 多种版本：短图文 / 卡片 / 金句</span></li>
+            <li><strong>视觉</strong><span>AI 帮你按内容生成对应封面与配图</span></li>
+            <li><strong>归档</strong><span>每个衍生版本都存回本地，以后可继续复用</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="shell rule">
+
+    <!-- ============== PLATFORMS ============== -->
+    <section class="shell platforms" id="platforms">
+      <header class="section-head">
+        <span class="section-head__mark">§ 04</span>
+        <h2>覆盖主流平台 <em>Platforms</em></h2>
+        <p>目前 <strong>XHS</strong> 能力最完整，其余平台的账号与素材管理也都可用，更多能力持续开放中。</p>
+      </header>
+
+      <div class="platform-grid">
+        <article class="platform-card platform-card--full">
+          <span class="platform-card__code">XHS</span>
+          <div>
+            <h4>能力完整</h4>
+            <p>账号登录态、素材管理、图文模板、AI 选题与改写、草稿本地库——全部可用。</p>
+          </div>
+          <span class="platform-card__status">Full</span>
+        </article>
+        <article class="platform-card">
+          <span class="platform-card__code">DY</span>
+          <div>
+            <h4>账号 · 素材</h4>
+            <p>独立工作区 + 本地素材库，AI 能力陆续接入中。</p>
+          </div>
+          <span class="platform-card__status">Beta</span>
+        </article>
+        <article class="platform-card">
+          <span class="platform-card__code">KS</span>
+          <div>
+            <h4>账号 · 素材</h4>
+            <p>独立工作区 + 本地素材库，AI 能力陆续接入中。</p>
+          </div>
+          <span class="platform-card__status">Beta</span>
+        </article>
+        <article class="platform-card">
+          <span class="platform-card__code">BL</span>
+          <div>
+            <h4>账号 · 素材</h4>
+            <p>独立工作区 + 本地素材库，AI 能力陆续接入中。</p>
+          </div>
+          <span class="platform-card__status">Beta</span>
+        </article>
+        <article class="platform-card">
+          <span class="platform-card__code">WB</span>
+          <div>
+            <h4>账号 · 素材</h4>
+            <p>独立工作区 + 本地素材库，AI 能力陆续接入中。</p>
+          </div>
+          <span class="platform-card__status">Beta</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============== CONTACT ============== -->
+    <section class="shell contact" id="contact">
+      <div class="contact__inner">
+        <div class="contact__head">
+          <span class="section-head__mark">§ 05</span>
+          <p class="contact__kicker">Let’s Talk</p>
+          <h2>聊聊你的账号，看看能不能帮到你</h2>
+          <p>优先通过<strong>微信</strong>沟通，能最快响应；也欢迎邮件留言。</p>
+        </div>
+
+        <div class="contact__primary">
+          <a class="wechat" href="#" data-wechat="13270786194" role="button" aria-label="添加微信 13270786194">
+            <span class="wechat__pre">WeChat · 首选</span>
+            <span class="wechat__id">13270786194</span>
+            <span class="wechat__hint">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                <path d="M9.5 4C5.4 4 2 6.8 2 10.3c0 1.8 1 3.4 2.5 4.6L4 17.2l2.6-1.4c.9.2 1.9.4 2.9.4h.4c-.2-.7-.3-1.4-.3-2.1 0-3.2 3-5.8 6.9-5.8.5 0 1 .1 1.5.1C17.3 5.8 13.8 4 9.5 4Z" fill="currentColor"/><path d="M22 14.6c0-2.8-2.8-5.1-6.2-5.1s-6.3 2.3-6.3 5.1c0 2.8 2.8 5.1 6.3 5.1 0.8 0 1.5-0.1 2.2-0.3L20 20.5l-0.3-1.7c1.4-0.9 2.3-2.3 2.3-4.2Z" fill="currentColor"/>
+              </svg>
+              点击复制微信号
+            </span>
+          </a>
+
+          <a class="phone phone--alt" href="tel:+8613270786194" aria-label="拨打电话 132 7078 6194">
+            <span class="phone__pre">TEL · +86 · 备用</span>
+            <span class="phone__num">132 <em>&thinsp;·&thinsp;</em> 7078 <em>&thinsp;·&thinsp;</em> 6194</span>
+            <span class="phone__post">
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="none"><path d="M3 3h4l1.5 3.5-2 1.5a10 10 0 0 0 3.5 3.5l1.5-2L15 11v4a2 2 0 0 1-2 2A14 14 0 0 1 1 5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+              点击即拨
+            </span>
+          </a>
+        </div>
+
+        <dl class="contact__list">
+          <div><dt>Email</dt><dd><a href="mailto:z2663219537@gmail.com">z2663219537@gmail.com</a></dd></div>
+          <div><dt>位置</dt><dd>中国 · 远程协作</dd></div>
+          <div><dt>响应</dt><dd>工作日 24 小时内</dd></div>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="masthead-foot">
+    <hr class="shell rule">
+    <div class="shell masthead-foot__inner">
+      <span>© 2026 &nbsp;·&nbsp; CreatorFlow Studio</span>
+      <span>AI-native creator desk · desktop workspace</span>
+      <span>Set in Fraunces &amp; JetBrains Mono</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="wechat-toast" role="status" aria-live="polite">微信号已复制，请打开微信添加</div>
+
+  <script>
+    (function () {
+      var trigger = document.querySelector('.wechat');
+      var toast = document.getElementById('wechat-toast');
+      if (!trigger || !toast) return;
+      trigger.addEventListener('click', function (event) {
+        event.preventDefault();
+        var id = trigger.getAttribute('data-wechat') || '';
+        var showToast = function () {
+          toast.classList.add('is-show');
+          clearTimeout(trigger._t);
+          trigger._t = setTimeout(function () {
+            toast.classList.remove('is-show');
+          }, 2600);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(id).then(showToast).catch(showToast);
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = id;
+          ta.style.position = 'fixed'; ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); } catch (e) {}
+          document.body.removeChild(ta);
+          showToast();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

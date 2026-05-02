@@ -2120,7 +2120,7 @@ code { font-family: var(--mono); font-size: 0.92em; }
 
 .platform-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
   margin-top: 26px;
   border-top: 1px solid var(--ink);
@@ -2129,33 +2129,34 @@ code { font-family: var(--mono); font-size: 0.92em; }
 .platform-card {
   padding: 28px 24px;
   border-right: 1px solid var(--ink);
-  display: grid;
-  grid-template-columns: 64px 1fr;
+  border-bottom: 1px solid var(--ink);
+  display: flex;
+  flex-direction: column;
   gap: 14px;
-  align-items: start;
+  align-items: flex-start;
   position: relative;
   transition: background .2s ease;
 }
-.platform-card:last-child { border-right: 0; }
+.platform-card:nth-child(3n) { border-right: 0; }
+.platform-card:nth-last-child(-n+3) { border-bottom: 0; }
 .platform-card:hover { background: rgba(26,22,18,0.03); }
 .platform-card--full {
-  grid-column: 1 / 2;
-  grid-row: 1 / span 2;
   background: var(--ink);
   color: var(--paper);
 }
 .platform-card--full:hover { background: var(--ink); }
 .platform-card__code {
   font-family: var(--mono);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 500;
   letter-spacing: -0.02em;
   padding-top: 2px;
   word-break: keep-all;
+  line-height: 1;
 }
 .platform-card--full .platform-card__code {
   color: var(--accent);
-  font-size: 72px;
+  font-size: 32px;
 }
 .platform-card h4 {
   margin: 0 0 6px;
@@ -2213,10 +2214,10 @@ code { font-family: var(--mono); font-size: 0.92em; }
   .scene__solution { grid-column: 1 / -1; padding: 28px 24px; border-top: 1px dashed rgba(26,22,18,0.25); }
   .platform-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .platform-card { border-right: 1px solid var(--ink); }
+  .platform-card:nth-child(n) { border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
   .platform-card:nth-child(2n) { border-right: 0; }
   .platform-card:nth-last-child(-n+2) { border-bottom: 0; }
-  .platform-card { border-bottom: 1px solid var(--ink); }
-  .platform-card--full { grid-column: 1 / -1; grid-row: auto; grid-template-columns: 80px 1fr; }
+  .platform-card--full { grid-column: auto; grid-row: auto; }
 }
 
 @media (max-width: 680px) {

@@ -2146,13 +2146,12 @@ code { font-family: var(--mono); font-size: 0.92em; }
 }
 .platform-card--full:hover { background: var(--ink); }
 .platform-card__code {
-  font-family: var(--serif);
-  font-style: italic;
+  font-family: var(--mono);
+  font-size: 24px;
   font-weight: 500;
-  font-size: 42px;
-  line-height: 1;
-  color: var(--accent);
   letter-spacing: -0.02em;
+  padding-top: 2px;
+  word-break: keep-all;
 }
 .platform-card--full .platform-card__code {
   color: var(--accent);

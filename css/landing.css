@@ -1529,7 +1529,7 @@ code { font-family: var(--mono); font-size: 0.92em; }
   margin-top: 42px;
 }
 
-/* WeChat — primary, rust filled */
+/* Contact — primary, rust filled */
 .wechat {
   display: block;
   padding: 32px 34px;
@@ -1713,6 +1713,79 @@ code { font-family: var(--mono); font-size: 0.92em; }
   text-transform: uppercase;
   color: var(--ink-mute);
 }
+.masthead-foot__inner a {
+  border-bottom: 1px solid rgba(185,78,39,0.45);
+}
+.masthead-foot__inner a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* Legal pages */
+.legal {
+  padding-top: clamp(48px, 6vw, 86px);
+  padding-bottom: clamp(60px, 8vw, 110px);
+}
+.legal__hero {
+  max-width: 780px;
+  margin-bottom: 36px;
+}
+.legal__hero h1 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(42px, 5vw, 78px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+  font-variation-settings: "opsz" 120;
+}
+.legal__hero > p:last-child {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.legal__document {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  max-width: 900px;
+}
+.legal__document section {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 58px);
+  padding: 30px 0;
+  border-bottom: 1px dashed rgba(26,22,18,0.28);
+}
+.legal__document section:last-child {
+  border-bottom: 0;
+}
+.legal__document h2 {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+}
+.legal__document p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 16px;
+  line-height: 1.82;
+}
+.legal__document a {
+  color: var(--accent-ink);
+  border-bottom: 1px solid rgba(185,78,39,0.45);
+}
+.legal__document a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
 
 /* Staggered reveal */
 @media (prefers-reduced-motion: no-preference) {
@@ -1775,6 +1848,7 @@ code { font-family: var(--mono); font-size: 0.92em; }
   .wechat, .phone { padding: 22px; }
   .masthead-foot__inner { flex-direction: column; gap: 6px; }
   .folio li { grid-template-columns: 1fr; gap: 6px; }
+  .legal__document section { grid-template-columns: 1fr; gap: 10px; padding: 24px 0; }
 }
 
 /* =============================================================
@@ -2239,4 +2313,3 @@ code { font-family: var(--mono); font-size: 0.92em; }
   .platform-card:last-child { border-bottom: 0; }
   .platform-card--full { grid-column: auto; }
 }
-
